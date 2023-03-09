@@ -1,4 +1,5 @@
 ﻿// ClickON.cpp : Определяет точку входа для приложения.
+// Имитирует нажатие левой кнопки мыши по заданным координатам и с заданным периодом.
 //
 
 #include "framework.h"
@@ -218,9 +219,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 SetWindowText(text_X, szText);
                 wsprintf(szText, _T("y: %i"), CursorXY.y);
                 SetWindowText(text_Y, szText);
-                //TCHAR szText[50];
-                //wsprintf(szText, _T("Position:\ncursor X: %i\ncursor Y: %i"), CursorXY.x, CursorXY.y);
-                //MessageBoxW(hWnd, szText, _T("Cursor position"), MB_ICONINFORMATION);
             }
         if(wParam == VK_LSHIFT || wParam == VK_RSHIFT)
             {
